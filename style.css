@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Aqui inicia o menu superior */
+.barrasuperior{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  height: 5rem ;
+  width: 100%;
+  background: linear-gradient(to bottom, #c2790b, #eab676);
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+
+  & div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 3rem;
+
+  }
+
+  & #botoes .cadastro p a:hover,
+  #botoes .esqueci p a:hover {
+      text-decoration: underline;
+      background-color: #eab676;
+      border: solid 1px;
+      margin: 0;
+      padding: 0;
+      
+  }
+}
+/* Aqui termina o menu superior */
+
+/* Aqui inicia a main */
+main{
+  padding-top: 5rem;
+  padding-left: 2rem;
+  background-color: #eab676;
+  color: rgb(255, 255, 255);
+
+& h1,
+p#apresentacao { 
+  color: rgb(218, 216, 216); /* Cor do texto, ajuste conforme necessário */
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Sombra ao redor do texto para simular uma borda preta */}
+
+}
+
+/* Aqui termina a main */
+
+
+
+#tela-usuario{
+  margin: 0rem 0rem 0rem 15rem;
+  display: flex;
+  flex-direction: row;
+  & p{
+    margin: 2rem 1.5rem 0rem 0.5rem;
+  }
+}
+
+
+.servicos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.servico {
+  flex: 1 1 calc(20% - 40px);
+  margin: 10px;
+  padding: 20px;
+  background-color: #c2790b;
+  color: white;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border-radius: 8px;
+}
+
+.servico h2 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.servico p {
+  margin: 0;
+  font-size: 1em;
+}
+
+
+    #Imagem img {
+        width: 80px;
+        height: 80px;
+    }
+    #menu p {
+        margin: 0 5px;
+        display: inline;
+        cursor: pointer;
+    }
+
+
+
+/* Media queries para responsividade */
+@media (max-width: 1200px) {
+  .servico {
+      flex: 1 1 calc(25% - 40px); /* 4 colunas */
+  }
+}
+
+@media (max-width: 900px) {
+  .servico {
+      flex: 1 1 calc(33.333% - 40px); /* 3 colunas */
+  }
+}
+
+@media (max-width: 600px) {
+  .servico {
+      flex: 1 1 calc(50% - 40px); /* 2 colunas */
+  }
+}
+
+@media (max-width: 400px) {
+  .servico {
+      flex: 1 1 100%; /* 1 coluna */
+  }
+}
+
